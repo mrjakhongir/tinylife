@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: #fff7ed;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #161616;
+}
+img {
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header-inner {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 35.2px;
+  letter-spacing: 0.3px;
+  color: #292929;
+}
+
+.header-inner > nav {
+  display: flex;
+  gap: 40px;
+}
+.nav-link {
+  font-size: 15px;
+  line-height: 24px;
+  color: #4d4d4d;
+  transition: all 200ms linear;
+  font-weight: 600;
+}
+.active-link {
+  font-size: 15px;
+  line-height: 24px;
+  transition: all 200ms linear;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #161616;
+}
+.nav-link:hover {
+  color: #161616;
+  text-decoration: underline;
+}
+
+/* Home page */
+
+.home-page {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  height: 76.5vh;
+}
+.home-page--left,
+.home-page--right {
+  width: 50%;
+}
+.title {
+  font-family: "Georgia";
+  margin-bottom: 40px;
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 400;
+}
+.text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4d4d4d;
+  margin-bottom: 40px;
+  width: 80%;
+}
+.home-img {
+  width: 100%;
+  border-radius: 8px;
+}
+.btn {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 22px;
+  color: #292929;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff8c38;
+  color: #fff;
+  letter-spacing: 0.3px;
+
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* About */
+
+.about-inner {
+  padding: 40px 0;
+  height: 76.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.about-left,
+.about-right {
+  width: 50%;
+}
+.about-img {
+  width: 100%;
+  border-radius: 8px;
+}
+.about-title {
+  color: #e17654;
+  font-weight: 600;
+}
+.about-text {
+  margin-bottom: 20px;
+}
+.about-btn {
+  background-color: #161616;
+  color: #fff;
+}
+
+/* Footer */
+
+.footer {
+  padding: 30px 0px;
+  text-align: center;
+  background-color: #161616;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Houses */
+.houeses-container {
+  padding: 40px 0;
+}
+.houses-title {
+  margin-bottom: 40px;
+  font-size: 35px;
+  text-align: center;
+}
+.houses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.house-card {
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: all 200ms linear;
+}
+.house-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 8px rgba(150, 150, 150, 0.12);
+}
+.house-img {
+  height: 70%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 10px;
+}
+.card-link {
+  color: #292929;
+}
+.name-cost {
+  font-family: "Arial", serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.house-btn {
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0.5em 1.2em;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.Rugged {
+  background-color: #115e59;
+}
+.Simple {
+  background-color: #e17654;
+}
+.Luxury {
+  background-color: #161616;
+}
+
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-btn {
+  background-color: #ffead0;
+  color: #4d4d4d;
+  transition: all 0.2s linear;
+}
+
+.filter-btn_simple:hover,
+.filter-btn_simple.selected {
+  background-color: #e17654;
+  color: #ffead0;
+}
+.filter-btn_luxury:hover,
+.filter-btn_luxury.selected {
+  background-color: #161616;
+  color: #ffead0;
+}
+.filter-btn_rugged:hover,
+.filter-btn_rugged.selected {
+  background-color: #115e59;
+  color: #ffead0;
+}
+.clear-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  color: #4d4d4d;
+  text-decoration: underline;
+}
+.clear-btn:hover {
+  color: #666;
+}
+
+/* House detail */
+
+.house-detail {
+  padding: 40px 0;
+}
+.back-link {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.detail-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.house-detail--left,
+.house-detail--right {
+  width: 50%;
+}
+.detail-img {
+  border-radius: 20px;
+}
+.detail-type {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 200ms linear;
+}
+.detail-btn:hover {
+  opacity: 0.88;
+}
+.name-price {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  color: #292929;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.detail-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+.detail-text {
+  max-width: 80%;
+  text-align: justify;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+.detail-btn {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  background-color: #ff8c38;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  text-align: center;
+  width: 80%;
+
+  transition: all 200ms linear;
+}
+
+/* Host Layout */
+
+.host-nav {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Host Houses*/
+
+.host-house {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.host-house__card {
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+
+  transition: all 0.15s linear;
+}
+
+.host-house__card:hover {
+  transform: scale(1.01);
+}
+
+.host-house__card > img {
+  height: 300px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+.host-house__title {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Host House Detail  */
+
+.host-house__detail {
+  margin: 40px 0;
+}
+
+.house-detail__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.house-detail__right > h3 {
+  margin-bottom: 20px;
+}
+
+.house-detail__title {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.house-detail__navigation {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+.host-house__details {
+  display: flex;
+  gap: 1rem;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+.host-house-photos {
+  margin-top: 20px;
+}
+
+.current-house__photo {
+  width: 20%;
+}
+
+/* Not found */
+
+.not-found {
+  max-width: 550px;
+  height: 70vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em;
+}
+
+.not-found > h1 {
+  text-align: center;
+  color: #292929;
+}
+
+.not-found__button {
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #292929;
+  text-align: center;
+  border: none;
+  padding: 0.6em 2em;
+  border-radius: 10px;
+  transition: all 150ms linear;
+}
+
+.not-found__button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* Login */
+
+.login-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  color: #292929;
+  border: 3px solid #115e59;
+  border-radius: 10px;
+  padding: 1em;
+  margin-bottom: 2em;
+  height: 72.5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.login-input {
+  padding: 0.7em 1em;
+  outline: none;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.login-btn {
+  margin-bottom: 2em;
+  cursor: pointer;
+  padding: 1em 0;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+}
+
+.sign-up-link {
+  color: #ff8c38;
+}
+
+.login-error {
+  text-align: center;
+  color: red;
+  margin-bottom: 1em;
+}
