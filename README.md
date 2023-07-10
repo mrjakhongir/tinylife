@@ -14,4 +14,4 @@ In this project I used **React UI** library. That gave me a lot of fun :) :
   - again I am sorry for styling...
 
     # deploy
-    
+    https://tiny-life.netlify.app/
